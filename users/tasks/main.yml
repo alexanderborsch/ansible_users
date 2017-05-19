@@ -1,0 +1,23 @@
+- name: Loading a list of user records
+  include_vars:
+    file: group_vars/users.yml
+
+- name: Managing local UNIX accounts
+  user:
+    name: "{{ item }}"
+    groups: "{{ users[item].groups | join(',') if 'groups' in users[item] else '' }}"
+    shell: "{{ users[item].shell if users[item].shell is defined else '/bin/bash' }}"
+    password: "{{ users[item].password if users[item].password is defined else '!' }}"
+    home: "{{ users[item].home | default('/home/' + item)  }}"
+    state: "{{ users[item].state if users[item].state is defined else 'present' }}"
+  with_items: "{{ unix_accounts }}"
+  tags: unix_accounts
+
+- name: Managing public SSH keys
+  authorized_key:
+    user: "{{ item }}"
+    key: "{{ users[item].ssh_key if users[item].ssh_key is defined else '' }}"
+  with_items: "{{ unix_accounts }}"
+  when: (users[item].state is not defined) or (users[item].state == 'present')
+  tags: ssh_public_keys
+

@@ -1,0 +1,13 @@
+users:
+  ansible:
+    name: Ansible agent account
+    groups: [wheel]
+    password: $6$fakeR/wEliIJIqNB8dn122n90WJ1xMyocZIK8AjFvmG6N37YWO/uYMaRTk6gyqdqcq7FL1lm2w..
+    ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsyO6w3tiCyM5G3RQo6LnSyhF8+cJ/eKtpF5Vu/OAHM69+W22Zgka9XTmhW51yCxJqMlz5rlWuYUFlKM7oV1ufmKRLFoUdFFnYTSe5irnn268TX47dhf7Mr2952PIHu136bst6g+MLVabG1tP96vYw3pwNWiXNnfSVd+jQL86ZgxMdg4M+SIrnT8WaHChlGetIg9zUYf/q6TH7dDG0+wBhOAW1RiAFwBVs+fnIFo/istnC/JOZmGaQO1CG8OcfxvCf//hSEeYxc0931IXd5n3MuSYG++Hu4Tx+ZgixKYOfakelUar5nQ5l6IJ2p6e8zxIbOfu+Bw== ansible@localhost.localdomain
+
+  alexander.borsch:
+    name: Alexander Borsch
+    groups: [wheel]
+    password: $fakePiQe9JthMZuWKlL4iF.4SPyuD/bV2.uMCPD896ItUUfIVGhTnda90wj2I20Y2bZ. 
+    ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXuE+wo+5FFvCl3VqHyP/e72gQU+b38TXyXmLLdiKafGmWtINgv12pxJx3Cl9blO07Zb839Ccw78z4nkC/JqViIzLRmp/D0JbFfjnwDjJNwRBtpD1PNvmbUjyfSJDKcKQZ2yehdnwgPSbEHp4P1TCelQuPg4eszECSDiZsTUgBZvaMTtQBmAqDfsTpvc7FsEzWR37Ak6LnF1kSd/mZXuNlA7f1k6IfBwbK5QORLvU4PCcV7q+rJe6ckmlbr8dop6JS/WEtNCNSYU/E52GKfHQjnCJRPVy6RFYXXdcrDOBKmmdWkn0d8oT9Phv8fake
+
